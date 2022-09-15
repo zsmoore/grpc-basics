@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package="example/grpc/hello";
+
+package hello;
+
+service Hello {
+  rpc Echo (Input) returns (Output) {}
+}
+
+message Input {
+  string input = 1;
+}
+
+message Output {
+  string output = 1;
+}
